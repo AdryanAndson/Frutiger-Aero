@@ -1,0 +1,77 @@
+* {
+    margin: 1;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'aero', sans-serif;
+
+}
+
+@font-face {
+    font-family: 'aero';
+    src: url(/aero.ttf) format('truetype');
+}
+
+body {
+    background-image: url(/fruiter.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.imag img {
+    position: relative;
+    left: 00%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+/* Historia e para onde Irei colocar as imagens em div*/
+.Historia {
+
+    background: rgba(255, 255, 255, 0.70);
+    /* Efeito vidro */
+    width: 100%;
+    border-radius: 10px;
+    text-align: justify;
+    color: #333;
+    border: 2px solid #0055aa;
+
+
+}
+
+.titulo {
+    text-align: center;
+}
+
+.barra-titulo {
+    
+    background-image: url('https://i.gifer.com/Fc.gif');
+    background-size: cover;
+    background-position: center;
+    /* Efeito vidro */
+    width: 100%;
+    border-radius: 10px;
+    text-align: justify;
+    color: #333;
+    border: 2px solid #0055aa;
+    text-align: justify;
+}
+
+.botao-fechar {
+    background-image: url('/Frutiger/delet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+
+}
+
+.fundo-azul {
+    background-color: #0055aa;
+}
