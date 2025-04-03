@@ -8,11 +8,11 @@
 
 @font-face {
     font-family: 'aero';
-    src: url(/aero.ttf) format('truetype');
+    src: url("aero.ttf") format('truetype');
 }
 
 body {
-    background-image: url(/fruiter.jpg);
+    background-image: url("fruiter.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -61,7 +61,7 @@ body {
 }
 
 .botao-fechar {
-    background-image: url('/Frutiger/delet.png');
+    background-image: url('delet.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
