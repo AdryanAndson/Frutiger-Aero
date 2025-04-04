@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./main.js"></script>
 </head>
 <body>
     <div class="login-box">
@@ -42,5 +41,27 @@
     </audio>
 
 </div>
+
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("background-music");
+
+        // Tenta tocar o áudio assim que a página carrega
+        let playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Autoplay bloqueado. O áudio tocará ao interagir com a página.");
+                
+                // Se o navegador bloquear, adicionamos um evento de clique para iniciar o áudio
+                document.addEventListener("click", function playOnClick() {
+                    audio.play();
+                    document.removeEventListener("click", playOnClick); // Remove o evento depois de tocar
+                });
+            });
+        }
+    });
+</script>
 </body>
 </html>
