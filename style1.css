@@ -76,3 +76,26 @@ body {
     border: none;
     color: white;
 }
+.cabeca{
+    text-align: center;
+}
+
+.janela-imagem{
+    
+    background-image: url('https://i.gifer.com/Fc.gif');
+    background-size: cover;
+    background-position: center;
+    /* Efeito vidro */
+    width: 20%;
+    border-radius: 10px;
+    color: #333;
+    border: 2px solid #0055aa;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+.janela-imagem img{
+    width: 100%;
+    
+}

@@ -19,7 +19,7 @@
                     <li><a href="">Exemplos</a></li>
                 </ul>
             </nav>
-            <header>
+            <header class="cabeca">
                 <div class="titulo">
                     <h1>Frutiger Aero</h1>
                 </div>
@@ -32,6 +32,8 @@
                     <div class="fundo-azul">
                         <div class="botao-fechar" onclick="this.parentElement.parentElement.style.display='none'"></div>
                     </div>
+                    
+
 
                     <h2 class="titulo">Historia</h2>
 
@@ -86,6 +88,20 @@
                     </div>
     
                     </div>
+
+
+                    <div class="janela-imagem">
+                        <div class="barra-titulo" id="caracteristica">
+                            <div class="fundo-azul">
+                                <div class="botao-fechar" onclick="this.parentElement.parentElement.style.display='none'"></div>
+                            </div>
+                            <div class="imagem">
+                                <img src="https://preview.redd.it/yigpbtatxa7b1.jpg?auto=webp&s=0431c1198bce303fd1df230e70cf5dcbb56c049b" alt="">
+                            </div>
+                            
+                        </div>
+        
+                        </div>
                 
 
                     <br>
@@ -99,6 +115,37 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Seleciona todas as janelas
     const janelas = document.querySelectorAll(".janela");
+
+    janelas.forEach(janela => {
+        const barraTitulo = janela.querySelector(".barra-titulo"); // Define a barra de título como área de arraste
+        let offsetX = 0, offsetY = 0, isDragging = false;
+
+        // Quando o usuário pressiona o botão do mouse
+        barraTitulo.addEventListener("mousedown", function (e) {
+            isDragging = true;
+            offsetX = e.clientX - janela.offsetLeft;
+            offsetY = e.clientY - janela.offsetTop;
+            janela.style.position = "absolute"; // Garante que a posição pode ser alterada
+            janela.style.zIndex = "1000"; // Para manter a janela em cima
+        });
+
+        // Quando o usuário move o mouse
+        document.addEventListener("mousemove", function (e) {
+            if (!isDragging) return;
+            janela.style.left = e.clientX - offsetX + "px";
+            janela.style.top = e.clientY - offsetY + "px";
+        });
+
+        // Quando o usuário solta o botão do mouse
+        document.addEventListener("mouseup", function () {
+            isDragging = false;
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona todas as janelas
+    const janelas = document.querySelectorAll(".janela-imagem");
 
     janelas.forEach(janela => {
         const barraTitulo = janela.querySelector(".barra-titulo"); // Define a barra de título como área de arraste
